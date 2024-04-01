@@ -1,2 +1,2 @@
 # Student Management System Java
-Student Management System
+Student Management System using jdbc
