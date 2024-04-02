@@ -46,5 +46,11 @@ public class StudentManagement {
  		if(result ==0)System.out.println("Failed");
  		System.out.println("Updated student successfully");
  	}
+ 	
+ 	public void exit() throws SQLException {
+ 		if(dbManagement != null) {
+ 			dbManagement.closeDBConnection();
+ 		}
+ 	}
 
 }

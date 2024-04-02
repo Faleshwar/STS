@@ -53,6 +53,7 @@ public class DBManagement {
 		pStatement = conn.prepareStatement(DELETE_STUDENT_BY_ID);
 		pStatement.setInt(1, Id);
 		int result = pStatement.executeUpdate();
+		pStatement.close();
 		if(result >0)return result;
 		return -1;
 	}
@@ -66,6 +67,7 @@ public class DBManagement {
 			Student s = new Student(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5), resultSet.getString(6));
 			students.add(s);
 		}
+		resultSet.close();
 		return students;
 	}
 	
@@ -79,8 +81,15 @@ public class DBManagement {
 		pStatement.setString(5, student.getCourse());
 		pStatement.setInt(6, Id);
 		int result = pStatement.executeUpdate();
+		pStatement.close();
 		if(result > 0)return result;
 		return -1;
+	}
+	
+	public void closeDBConnection() throws SQLException {
+		if(!conn.isClosed()) {
+			conn.close();
+		}
 	}
 
 }

@@ -8,8 +8,8 @@ public class ConnectionDB {
 	
 	private static final ConnectionDB ConnectionDB = null;
 	private final String DB_URL = "com.mysql.cj.jdbc.Driver";
-	private final String username = "@user1";
-	private final String password = "user";
+	private final String username = "root";
+	private final String password = "root";
 	private static Connection conn = null;
 	public static ConnectionDB CONN = null;
 	private final String url = "jdbc:mysql://localhost:3306/students_db";

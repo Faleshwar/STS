@@ -3,10 +3,6 @@ package com.studentmanagement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
 	
@@ -76,6 +72,7 @@ public class App
     			studentManagement.deleteById(Id);
     			break;
     		case 5:
+    			studentManagement.exit();
     			System.exit(1);
     			break;
 
