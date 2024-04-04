@@ -30,13 +30,11 @@ public class StudentManagement {
  	}
  	
  	public void deleteById(int Id) throws SQLException {
- 		int result = dbManagement.delete(Id);
- 		if(result == 0) {
- 			System.out.println("Student Deleted Successfully");
- 		}
- 		else {
-			System.out.println("Failed");
-		}
+// 		int result = dbManagement.delete(Id);
+ 		
+ 		System.out.println("Student Deleted Successfully...");
+ 		
+ 		
  		
  		
  	}

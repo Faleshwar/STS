@@ -54,7 +54,7 @@ public class DBManagement {
 		pStatement.setInt(1, Id);
 		int result = pStatement.executeUpdate();
 		pStatement.close();
-		if(result >0)return result;
+		if(result ==0)return result;
 		return -1;
 	}
 	
